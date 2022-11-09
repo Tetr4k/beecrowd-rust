@@ -10,7 +10,7 @@ command = "rustc ./"+str(program)+"/main.rs"
 system(command)
 
 if files:
-	for f in files:
+	for f in sorted(files):
 		if ".txt" in f:
 			system("./main < ./"+program+"/"+f)
 else:
